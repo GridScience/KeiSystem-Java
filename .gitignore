@@ -1,0 +1,28 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+# Output files
+out/
+
+# IntelliJ IDEA files
+.idea/
+KeiSystem.iml
+
+#Tooling
+[Tt]est[Rr]esult*
+
+#Subversion files
+.svn
+
+# Office Temp Files
+~$*
+
+#Unix temporary files
+*~
+
+# Output docs
+
+# Generated Project files
+# These should be changed to just *.csproj and *.sln when
+# all projects have been converted over.
