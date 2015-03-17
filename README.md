@@ -10,7 +10,10 @@
 
 ## 编译
 
-**该项目基于 Java SE 8 (Java 1.8)，请安装 JDK 8 以编译。**
+该项目使用依赖库：
+
+- JDK 8
+- Apache MINA (2.0.9)
 
 由于该项目使用 IntelliJ IDEA 开发，而且选用了编译 GUI 选项，因此暂时需要 IDEA 的 javac2 支持。以后可能会改变这些限制。
 
