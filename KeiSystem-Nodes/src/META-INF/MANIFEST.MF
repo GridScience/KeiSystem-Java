@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Class-Path: mina-core-2.0.9.jar mina-http-2.0.9.jar mina-example-2.0.9
+ .jar mina-statemachine-2.0.9.jar mina-transport-apr-2.0.9.jar mina-in
+ tegration-jmx-2.0.9.jar mina-integration-ognl-2.0.9.jar mina-integrat
+ ion-beans-2.0.9.jar mina-integration-xbean-2.0.9.jar mina-filter-comp
+ ression-2.0.9.jar ognl-3.0.8.jar jzlib-1.1.3.jar slf4j-api-1.7.7.jar 
+ commons-lang-2.6.jar xbean-spring-4.0.jar tomcat-apr-5.5.23.jar sprin
+ g-2.5.6.SEC03.jar javassist-3.11.0.GA.jar jcl-over-slf4j-1.7.7.jar co
+ mmons-logging-1.0.3.jar
+Main-Class: com.mic.keisystem.gui.Main
+

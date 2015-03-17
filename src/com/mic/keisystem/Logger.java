@@ -1,7 +1,7 @@
 package com.mic.keisystem;
 
 /**
- * Created by Wallace on 2015/3/13.
+ * Created by MIC/Headcrabbed on 2015/3/17.
  * 表示日志记录器。
  */
 public class Logger implements Loggable {

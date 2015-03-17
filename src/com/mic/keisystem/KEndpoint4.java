@@ -42,7 +42,7 @@ public final class KEndpoint4 extends KEndpoint {
         KEndpoint4 kep = new KEndpoint4();
         // 这么不优美的写法是 Enumerable 的缺失导致的
         kep.setAddress(new byte[]{bytes[0], bytes[1], bytes[2], bytes[3]});
-        kep.setPort(BitConverter.toInt(new byte[]{0, 0, bytes[4], bytes[5]}, 0, 4));
+        kep.setPort(BitConverter.toInt(new byte[]{0, 0, bytes[4], bytes[5]}, 0));
         return kep;
     }
 

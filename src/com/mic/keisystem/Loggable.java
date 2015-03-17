@@ -2,9 +2,6 @@ package com.mic.keisystem;
 
 /**
  * Created by MIC/Headcrabbed on 2015/3/13.
- */
-
-/**
  * 一个简单的日志记录接口。
  */
 public interface Loggable {

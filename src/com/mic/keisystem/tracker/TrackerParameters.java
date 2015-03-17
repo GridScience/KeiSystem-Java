@@ -1,7 +1,7 @@
 package com.mic.keisystem.tracker;
 
 import com.mic.keisystem.InfoHash;
-import com.mic.keisystem.KeiUtilities;
+import com.mic.keisystem.KSUtilities;
 
 import java.util.HashMap;
 
@@ -79,7 +79,7 @@ public final class TrackerParameters {
     public static TrackerParameters resolve(HashMap<String, String> parameters) {
         // Resolve request parameters.
         // Remember that these statements may throw exceptions.
-        String infoHashString = KeiUtilities.unescapePartiallyEncodedString(parameters.get("info_hash"));
+        String infoHashString = KSUtilities.unescapePartiallyEncodedString(parameters.get("info_hash"));
         System.out.println(infoHashString);
         InfoHash infoHash = InfoHash.fromHexString(infoHashString);
         int portNumber = Integer.parseInt(parameters.get("port"));
@@ -108,7 +108,7 @@ public final class TrackerParameters {
             int n = Integer.parseInt(parameters.get("no_peer_id"));
             noPeerID = n != 0;
         }
-        String peerIDString = KeiUtilities.unescapePartiallyEncodedString(parameters.get("peer_id"));
+        String peerIDString = KSUtilities.unescapePartiallyEncodedString(parameters.get("peer_id"));
 
         return new TrackerParameters(infoHash, portNumber, taskStatus, compact, noPeerID, peerIDString);
     }

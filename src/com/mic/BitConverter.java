@@ -3,6 +3,7 @@ package com.mic;
 /**
  * Created by MIC/Headcrabbed on 2015/3/14.
  * 转换全为 little endian（低位在前: b[0] b[1] b[2] b[3]）。
+ * 警告：这些方法未测试，可能会因 byte 的符号位得到错误的结果。
  */
 public final class BitConverter {
 
@@ -50,6 +51,10 @@ public final class BitConverter {
         return getBytes(Float.floatToIntBits(value));
     }
 
+    public static long toLong(byte[] bytes, int start) {
+        return toLong(bytes, start, 8);
+    }
+
     public static long toLong(byte[] bytes, int start, int length) {
         long num = bytes[start];
         int shift = 8;
@@ -58,6 +63,10 @@ public final class BitConverter {
             shift += 8;
         }
         return num;
+    }
+
+    public static int toInt(byte[] bytes, int start) {
+        return toInt(bytes, start, 4);
     }
 
     public static int toInt(byte[] bytes, int start, int length) {
@@ -70,6 +79,10 @@ public final class BitConverter {
         return num;
     }
 
+    public static short toShort(byte[] bytes, int start) {
+        return toShort(bytes, start, 2);
+    }
+
     public static short toShort(byte[] bytes, int start, int length) {
         short num = bytes[start];
         int shift = 8;
@@ -80,12 +93,24 @@ public final class BitConverter {
         return num;
     }
 
+    public static byte toByte(byte[] bytes, int start) {
+        return toByte(bytes, start, 1);
+    }
+
     public static byte toByte(byte[] bytes, int start, int length) {
         return bytes[start];
     }
 
+    public static double toDouble(byte[] bytes, int start) {
+        return Double.longBitsToDouble(toLong(bytes, start));
+    }
+
     public static double toDouble(byte[] bytes, int start, int length) {
         return Double.longBitsToDouble(toLong(bytes, start, length));
+    }
+
+    public static float toFloat(byte[] bytes, int start) {
+        return Float.intBitsToFloat(toInt(bytes, start));
     }
 
     public static float toFloat(byte[] bytes, int start, int length) {

@@ -5,7 +5,7 @@ import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 
 /**
- * Created by Wallace on 2015/3/14.
+ * Created by MIC/Headcrabbed on 2015/3/17.
  */
 public abstract class KEndpoint implements Cloneable {
 

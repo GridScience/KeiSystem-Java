@@ -1,7 +1,7 @@
 package com.mic.keisystem;
 
 /**
- * Created by Wallace on 2015/3/13.
+ * Created by MIC/Headcrabbed on 2015/3/17.
  */
 public final class InfoHash {
 
@@ -35,10 +35,10 @@ public final class InfoHash {
         }
         byte[] buffer = new byte[20];
         for (int i = 0; i < 20; i++) {
-            if (!(KeiUtilities.isHexDigit(hexString.charAt(i * 2)) && KeiUtilities.isHexDigit(hexString.charAt(i * 2 + 1)))) {
+            if (!(KSUtilities.isHexDigit(hexString.charAt(i * 2)) && KSUtilities.isHexDigit(hexString.charAt(i * 2 + 1)))) {
                 throw new IllegalArgumentException("hexString has a wrong format.");
             }
-            buffer[i] = (byte) ((KeiUtilities.fromHex(hexString.charAt(i * 2)) << 4) + KeiUtilities.fromHex(hexString.charAt(i * 2 + 1)));
+            buffer[i] = (byte) ((KSUtilities.fromHex(hexString.charAt(i * 2)) << 4) + KSUtilities.fromHex(hexString.charAt(i * 2 + 1)));
         }
         InfoHash infoHash = new InfoHash();
         infoHash.dataBytes = buffer;

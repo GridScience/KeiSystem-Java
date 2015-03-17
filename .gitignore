@@ -5,9 +5,8 @@
 # Output files
 out/
 
-# IntelliJ IDEA files
+# IntelliJ IDEA cache
 .idea/
-KeiSystem.iml
 
 # ANT properties
 build.properties

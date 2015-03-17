@@ -6,7 +6,7 @@ import java.util.HashMap;
 /**
  * Created by MIC/Headcrabbed on 2015/3/15.
  */
-public final class KeiUtilities {
+public final class KSUtilities {
 
     public static HashMap<String, String> decomposeParameters(String parameters) {
         // Warning: DO simplify this method, please. Also, write a unit test to test the "contentType is always 1"

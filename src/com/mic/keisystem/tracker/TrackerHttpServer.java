@@ -7,14 +7,12 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import com.sun.net.httpserver.spi.HttpServerProvider;
-import sun.net.util.IPAddressUtil;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.*;
 import java.nio.charset.Charset;
 import java.util.*;
-import java.util.function.BiConsumer;
 
 /**
  * Created by Wallace on 2015/3/13.
@@ -188,7 +186,7 @@ public final class TrackerHttpServer {
             // toString()? toASCIIString()?
             // +1: announce? vs. announce (method token '?')
             String paramString = uri.toString().substring(getAnnounce().length() + 1);
-            HashMap<String, String> parameters = KeiUtilities.decomposeParameters(paramString);
+            HashMap<String, String> parameters = KSUtilities.decomposeParameters(paramString);
             // May throw exceptions.
             TrackerParameters trackerParameters = TrackerParameters.resolve(parameters);
 
