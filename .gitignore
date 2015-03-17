@@ -9,6 +9,9 @@ out/
 .idea/
 KeiSystem.iml
 
+# ANT properties
+build.properties
+
 #Tooling
 [Tt]est[Rr]esult*
 

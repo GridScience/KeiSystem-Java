@@ -44,8 +44,8 @@ public final class TrackerHttpServer {
     /**
      * Information
      *
-     * @param address Address to use.
-     * @param backlog Maximum clients connected to this server.
+     * @param address 要使用的本机终结点，包含 IP 地址和端口。
+     * @param backlog 可以连接到该服务器的最大客户端数量。
      * @throws java.io.IOException 继承自 {@code HttpServer} 的异常抛出。
      */
     public void startServer(InetSocketAddress address, int backlog) throws IOException {
