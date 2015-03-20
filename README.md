@@ -4,6 +4,8 @@
 
 ## 状态
 
+由于资源申请获得了通过，不需要分布式 tracker 网络，KeiSystem 暂停开发。此前的计划：将协议修改为基于 HTTP 的请求/请求-响应（因此不需要写底层 TCP 连接）；使用 Apache HttpComponents 替换正在用的 Sun HTTP API。
+
 已完成的部分:
 
 - Tracker 服务器（有少量潜在的bug，见注释）
